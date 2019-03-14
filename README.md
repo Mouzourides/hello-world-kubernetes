@@ -9,7 +9,7 @@ This project contains:
  - two (really) micro services, hello-micro-service and world-micro-service. Both are written in Java spring boot;
  - Dockerfiles for both microservices, both have been pushed to Dockerhub;
  - Kubernetes yaml config files to create a deployment and service;
- - A `setup.sh` script that runs uses the yaml to set up the deployment, pods and service.
+ - A `setup.sh` script that runs uses the yaml to set up the deployment, pods and a service.
 
 The hello-micro-service runs on port 8080 and has two endpoints. `/hello` simply return "Hello", `/helloworld` returns "Hello world!" by concatenating "Hello" to the result of the endpoint on world-micro-service.
 The world-micro-service runs on port 8081 and has one endpoint. `/world` simply returns " world!".
