@@ -17,9 +17,23 @@ spec:
       containers:
         - name: hello-micro-service
           image: mouzourides/hello-micro-service:latest
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "100Mi"
+            requests:
+              cpu: "10m"
+              memory: "64m"
           ports:
           - containerPort: 8080
         - name: world-micro-service
           image: mouzourides/world-micro-service:latest
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "100Mi"
+            requests:
+              cpu: "10m"
+              memory: "64m"
           ports:
           - containerPort: 8081
